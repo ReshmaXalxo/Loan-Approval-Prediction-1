@@ -4,8 +4,8 @@ import pickle as pk
 
 import pickle as pk
 
-model = pk.load(open(r"C:\Users\ASUS\Desktop\streamlit app\model.pkl", "rb"))
-scaler = pk.load(open(r"C:\Users\ASUS\Desktop\streamlit app\scaler.pkl", "rb"))
+model = pk.load(open("model.pkl", "rb"))
+scaler = pk.load(open("scaler.pkl", "rb"))
 
 
 st.header('Loan Prediction App')
@@ -35,4 +35,5 @@ if st.button("Predict"):
     if predict==1:
         st.markdown('Loan is approved')
     else:
+
         st.markdown('Loan is Rejected')
